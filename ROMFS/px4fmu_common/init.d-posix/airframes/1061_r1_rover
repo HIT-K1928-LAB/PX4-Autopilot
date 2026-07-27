@@ -37,4 +37,118 @@ param set-default PWM_MAIN_FUNC2 101
 param set-default PWM_MAIN_FUNC6 102
 param set-default PWM_MAIN_FUNC7 102
 
+
+###############################################################################
+# Team RC calibration and flight mode configuration
+###############################################################################
+
+# RC and Joystick with fallback
+param set COM_RC_IN_MODE 2
+
+# Number of calibrated channels
+param set RC_CHAN_CNT 8
+
+
+###############################################################################
+# RC channel calibration
+###############################################################################
+
+# Channel 1: Roll
+param set RC1_MIN 1000
+param set RC1_MAX 2000
+param set RC1_TRIM 1500
+param set RC1_DZ 10
+param set RC1_REV 1
+
+# Channel 2: Pitch
+param set RC2_MIN 1000
+param set RC2_MAX 2000
+param set RC2_TRIM 1500
+param set RC2_DZ 10
+param set RC2_REV -1
+
+# Channel 3: Throttle
+param set RC3_MIN 1000
+param set RC3_MAX 2000
+param set RC3_TRIM 2000
+param set RC3_DZ 10
+param set RC3_REV -1
+
+# Channel 4: Yaw
+param set RC4_MIN 1000
+param set RC4_MAX 2000
+param set RC4_TRIM 1500
+param set RC4_DZ 10
+param set RC4_REV 1
+
+# Channel 5
+param set RC5_MIN 1000
+param set RC5_MAX 2000
+param set RC5_TRIM 1500
+param set RC5_DZ 10
+param set RC5_REV 1
+
+# Channel 6
+param set RC6_MIN 1000
+param set RC6_MAX 2000
+param set RC6_TRIM 1500
+param set RC6_DZ 10
+param set RC6_REV 1
+
+# Channel 7: Flight mode switch
+param set RC7_MIN 1000
+param set RC7_MAX 2000
+param set RC7_TRIM 1500
+param set RC7_DZ 10
+param set RC7_REV 1
+
+# Channel 8: Kill switch
+param set RC8_MIN 1000
+param set RC8_MAX 2000
+param set RC8_TRIM 1500
+param set RC8_DZ 10
+param set RC8_REV 1
+
+
+###############################################################################
+# Main stick mapping
+###############################################################################
+
+param set RC_MAP_ROLL 1
+param set RC_MAP_PITCH 2
+param set RC_MAP_THROTTLE 3
+param set RC_MAP_YAW 4
+
+
+###############################################################################
+# Flight mode switch: Channel 7
+###############################################################################
+
+param set RC_MAP_FLTMODE 7
+
+# Low position: Stabilized
+param set COM_FLTMODE1 8
+
+# Unused
+param set COM_FLTMODE2 -1
+param set COM_FLTMODE3 -1
+
+# Middle position: Altitude
+param set COM_FLTMODE4 1
+
+# Unused
+param set COM_FLTMODE5 -1
+
+# High position: Position
+param set COM_FLTMODE6 2
+
+
+###############################################################################
+# Emergency kill switch: Channel 8
+###############################################################################
+
+param set RC_MAP_KILL_SW 8
+param set RC_KILLSWITCH_TH 0.75
+
+
 set MIXER_FILE skip
