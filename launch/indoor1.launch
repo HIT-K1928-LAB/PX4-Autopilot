@@ -26,12 +26,12 @@
             <arg name="fcu_url" default="udp://:24540@localhost:34580"/>
         <!-- PX4 SITL and vehicle spawn -->
         <include file="$(find px4)/launch/single_vehicle_spawn_xtd.launch">
-            <arg name="x" value="0"/>
-            <arg name="y" value="7.5"/>
+            <arg name="x" value="-0.46"/>
+            <arg name="y" value="1.45"/>
             <arg name="z" value="0.5"/>
             <arg name="R" value="0"/>
             <arg name="P" value="0"/>
-            <arg name="Y" value="0"/>
+            <arg name="Y" value="1.55"/>
             <arg name="vehicle" value="iris"/>
             <arg name="sdf" value="iris_stereo_camera"/>
             <arg name="mavlink_udp_port" value="18570"/>
@@ -42,7 +42,7 @@
         <!-- MAVROS -->
         <include file="$(find mavros)/launch/px4.launch">
             <arg name="fcu_url" value="$(arg fcu_url)"/>
-            <arg name="gcs_url" value=""/>
+            <arg name="gcs_url" value="udp://@192.168.31.152:14550"/>
             <arg name="tgt_system" value="$(eval 1 + arg('ID'))"/>
             <arg name="tgt_component" value="1"/>
         </include>
